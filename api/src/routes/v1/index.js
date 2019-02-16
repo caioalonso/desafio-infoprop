@@ -8,7 +8,7 @@ const router = Express.Router();
 const upload = Multer({ storage: Multer.memoryStorage() });
 
 router.get("/properties", async (req, res) => {
-  let fields = "rua latitude longitude bairro condominio";
+  let fields = "rua location bairro condominio";
   let selector = {};
   if (
     req.query.latMin &&
