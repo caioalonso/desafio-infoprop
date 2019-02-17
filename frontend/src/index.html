@@ -21,6 +21,7 @@
               height: 100%;
               width: 100%;
               position:absolute;
+              z-index:2;
               margin: 0 auto;
             }
             .leaflet-tooltip h1 {
@@ -31,6 +32,19 @@
             .leaflet-tooltip ul {
               padding-left:1rem;
               margin:0;
+            }
+            .FileUpload {
+              position:absolute;
+              z-index:2;
+              left:0; right:0;
+              margin-left:auto; margin-right:auto;
+              width:400px;
+            }
+            .FileUpload .filepond--wrapper {
+              box-shadow: 0 0 2px 1px #888;
+            }
+            .FileUpload span.small {
+              font-size:80%;
             }
           </style>
 </head>
