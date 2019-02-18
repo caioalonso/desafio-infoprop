@@ -1,10 +1,26 @@
 # Desafio InfoProp
 
-## Instruções para desenvolvimento
+## Development instructions
 ```
 git clone https://github.com/caioalonso/desafio-infoprop
 cd desafio-infoprop
 docker-compose -f docker-compose.yml -f docker-compose.development.yml up
+```
+
+## Deploy instructions
+```
+$(aws ecr get-login --no-include-email --region sa-east-1)
+docker build -t frontend frontend
+docker build -t api api
+docker tag frontend:latest 390576755599.dkr.ecr.sa-east-1.amazonaws.com/desafio-infoprop/frontend:latest
+docker tag api:latest 390576755599.dkr.ecr.sa-east-1.amazonaws.com/desafio-infoprop/api:latest
+docker push 390576755599.dkr.ecr.sa-east-1.amazonaws.com/desafio-infoprop/frontend:latest
+docker push 390576755599.dkr.ecr.sa-east-1.amazonaws.com/desafio-infoprop/api:latest
+```
+
+Then on the EC2 with the `docker-compose.*` files in place:
+```
+docker-compose -f docker-compose.yml -f docker-compose.production.yml up
 ```
 
 ### Observações
