@@ -33,6 +33,16 @@ router.get("/properties", async (req, res) => {
   }
 });
 
+router.post("/properties/reset", async (req, res) => {
+  try {
+    await Property.deleteMany({})
+    return res.sendStatus(200);
+  } catch (err) {
+    console.log(err);
+    return res.sendStatus(500);
+  }
+})
+
 router.post(
   "/properties/csvUpload",
   upload.single("csvFile"),

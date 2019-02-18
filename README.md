@@ -23,6 +23,18 @@ Then on the EC2 with the `docker-compose.*` files in place:
 docker-compose -f docker-compose.yml -f docker-compose.production.yml up
 ```
 
+### API Endpoints
+
+- GET /v1/properties
+  - returns all properties
+  - optional parameters:
+    - latMin, lonMin, latMax, lonMax
+  - when all optional parameters are provided, will return only the properties within the rectangle defined by the (latMin,lonMin) (latMax,lonMax) points
+- POST /v1/properties/csvUpload
+  - receives a CSV file with the name csvFile
+- POST /v1/properties/reset
+  - removes all properties
+
 ### Observações
 
 #### Arquivo CSV
