@@ -2,6 +2,7 @@
 .vscode/
 node_modules/
 build
+dist
 .DS_Store
 *.tgz
 my-app*
@@ -12,4 +13,3 @@ yarn-debug.log*
 yarn-error.log*
 /.changelog
 .npm/
-

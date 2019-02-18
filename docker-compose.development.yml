@@ -1,6 +1,7 @@
 version: '3.1'
 services:
   api:
+    build: api
     command: yarn dev
     environment:
       NODE_ENV: development

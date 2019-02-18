@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import PropertiesMap from "./PropertiesMap";
 import FileUpload from "./FileUpload";
+import config from "../config";
 
 // App component
 class App extends Component {
@@ -20,7 +21,7 @@ class App extends Component {
   fetchData = async () => {
     this.setState({ isLoading: true });
     try {
-      const result = await axios.get("http://localhost:3000/v1/properties");
+      const result = await axios.get(config.apiurl + "/v1/properties");
       this.setState({
         properties: result,
         isLoading: false
