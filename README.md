@@ -4,7 +4,7 @@
 ```
 git clone https://github.com/caioalonso/desafio-infoprop
 cd desafio-infoprop
-docker-compose up
+docker-compose -f docker-compose.yml -f docker-compose.development.yml up
 ```
 
 ### Observações

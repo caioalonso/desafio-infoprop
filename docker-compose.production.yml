@@ -1,0 +1,11 @@
+version: '3.1'
+services:
+  api:
+    image: 237662004116.dkr.ecr.sa-east-1.amazonaws.com/desafio-infoprop/api:latest
+    command: node bin/www
+    environment:
+      NODE_ENV: production
+
+  frontend:
+    image: 237662004116.dkr.ecr.sa-east-1.amazonaws.com/desafio-infoprop/frontend:latest
+    command: yarn run pushstate-server -p 3000 -d dist
