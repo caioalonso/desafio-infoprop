@@ -1,3 +1,12 @@
+# Desafio InfoProp
+
+## Instruções para desenvolvimento
+```
+git clone https://github.com/caioalonso/desafio-infoprop
+cd desafio-infoprop
+docker-compose up
+```
+
 ### Observações
 
 #### Arquivo CSV
