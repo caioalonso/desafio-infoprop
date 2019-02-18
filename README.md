@@ -7,6 +7,8 @@ cd desafio-infoprop
 docker-compose -f docker-compose.yml -f docker-compose.development.yml up
 ```
 
+The frontend will be available at http://localhost:3000 . The API at :3001.
+
 ## Deploy instructions
 ```
 $(aws ecr get-login --no-include-email --region sa-east-1)
